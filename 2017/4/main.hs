@@ -1,7 +1,7 @@
 
 import Data.List
 
-numDuplicates line = foldl1 max $ map length $ group $ sort $ words line
+numDuplicates line = foldl1 max $ map length $ group $ sort $ map sort $ words line
 
 main = do
   contents <- getContents
